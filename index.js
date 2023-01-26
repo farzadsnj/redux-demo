@@ -23,10 +23,10 @@ const buyIceCream = () => {
   };
 };
 
-// const initialState = {
-//     numOfCakes: 10,
-//     numOFIceCreams: 20
-// }
+const initialState = {
+  numOfCakes: 10,
+  numOFIceCreams: 20,
+};
 const initialCakeState = {
   numOfCakes: 10,
 };
@@ -35,21 +35,24 @@ const initialIceCreamState = {
   numOFIceCreams: 20,
 };
 
-// const reducer = (state = initialState, action) =>{
-//     switch(action.type){
-//         case BUY_CAKE: return{
-//             ...state,
-//             numOfCakes: state.numOfCakes - 1
-//         }
+const reducer = (state = initialState, action) => {
+  switch (action.type) {
+    case BUY_CAKE:
+      return {
+        ...state,
+        numOfCakes: state.numOfCakes - 1,
+      };
 
-//         case BUY_ICECREAM: return{
-//             ...state,
-//             numOFIceCreams: state.numOFIceCreams - 1
-//         }
+    case BUY_ICECREAM:
+      return {
+        ...state,
+        numOFIceCreams: state.numOFIceCreams - 1,
+      };
 
-//         default: return state
-//     }
-// }
+    default:
+      return state;
+  }
+};
 
 const cakeReducer = (state = initialCakeState, action) => {
   switch (action.type) {
